@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Startup Idea Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
+O **Startup Idea Generator** é uma aplicação que utiliza a API da OpenAI (GPT-3.5) para gerar ideias de startups baseadas em áreas de interesse fornecidas pelo usuário. O usuário pode inserir uma área de interesse, como saúde, tecnologia, finanças, entre outras, e a aplicação irá gerar uma sugestão de ideia para um aplicativo ou serviço relacionado a essa área.
 
-## Available Scripts
+## Funcionalidades
+- **Entrada do usuário:** O usuário insere uma área de interesse, como "saúde", "educação", ou "tecnologia".
+- **Geração de ideia:** O backend utiliza a API da OpenAI para gerar uma ideia de startup com base na área de interesse fornecida.
+- **Exibição da ideia:** A ideia gerada é exibida na interface de forma limpa e organizada.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+- **Frontend:** React.js
+- **Backend:** Node.js com Express
+- **API:** OpenAI GPT-3.5
+- **Estilos:** CSS para estilização minimalista e responsiva.
 
-### `npm start`
+## Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Antes de começar, você precisará de:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js instalado (v16 ou superior).
+- Uma chave API da OpenAI. Você pode obter sua chave [aqui](https://platform.openai.com/).
 
-### `npm test`
+## Como Executar o Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clonar o Repositório
 
-### `npm run build`
+Primeiro, clone o repositório para o seu computador:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://seu-repositorio-url
+cd startup-idea-generator
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# ## 2. Instalar Dependências
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Execute o comando abaixo para instalar as dependências do projeto
+# No diretório do frontend:
 
-### `npm run eject`
+# ```bash
+# cd frontend
+# npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# No diretório do backend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# ```bash
+# cd backend
+# npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# ### 3. Configuração do Ambiente
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# No diretório do backend, crie um arquivo .env e insira sua chave API da OpenAI:
 
-## Learn More
+# ```.env
+# OPENAI_API_KEY=seu-chave-api-openai
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# ### 4. Executar o Backend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# No diretório do backend, execute o servidor com o comando:
 
-### Code Splitting
+# ```bash
+# node server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# O servidor Express estará rodando na porta 5000.
 
-### Analyzing the Bundle Size
+# ### 5. Executar o Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# No diretório do frontend, execute a aplicação React:
 
-### Making a Progressive Web App
+# ```bash
+# npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# A aplicação estará disponível em http://localhost:3000.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Estrutura do Projeto
 
-### Deployment
+# startup-idea-generator/
+# ├── frontend/               # Frontend (React)
+# │   ├── public/
+# │   ├── src/
+# │   └── package.json
+# ├── backend/                # Backend (Node.js/Express)
+# │   ├── server.js
+# │   ├── .env                # Chave da API da OpenAI
+# │   └── package.json
+# ├── .gitignore
+# └── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Como Usar
 
-### `npm run build` fails to minify
+# 1. Abra o frontend no navegador (http://localhost:3000).
+# 2. Digite uma área de interesse no campo de entrada (exemplo: "saúde", "educação", "tecnologia").
+# 3. Clique no botão "Gerar Ideia".
+# 4. A ideia de startup será exibida logo abaixo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Exemplo de Uso
+# Entrada:
+# . Área de interesse: "Saúde"
+
+# Resultado da Ideia:
+# "Aplicativo para agendamento de consultas médicas com especialidades, oferecendo uma interface simples para pacientes e médicos."
+
+
+# Contribuindo
+# Se você quiser contribuir para este projeto, siga os passos abaixo:
+
+# 1. Faça um fork deste repositório.
+# 2. Crie uma branch para suas modificações (git checkout -b minha-nova-feature).
+# 3. Faça commit das suas mudanças (git commit -am 'Adicionando nova feature').
+# 4. Envie para o repositório (git push origin minha-nova-feature).
+# 5. Abra um pull request.
+
+# Contato
+# Caso tenha dúvidas ou sugestões, fique à vontade para entrar em contato!
+
+# Autor: Sthefany Lara
+# E-mail: sthefanylara.2001@gmail.com
